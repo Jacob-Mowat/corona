@@ -87,3 +87,20 @@ corona['nucleocapsid_phosphoprotein'] = translate(cc[28274-1:29533], True)
 # might be called the internal protein (Coronavirus Pathogenesis)
 corona['orf10'] = translate(cc[29558-1:29674], True)
 
+for k,v in corona.items():
+    print(f"{k} => {v[0:20]}")
+
+
+
+# import tensorflow as tf
+import base64
+import struct
+
+corona_data_pre = {}
+
+def str_to_flt(string):
+    return struct.unpack('f', bytes(c.encode('utf-8')))
+
+
+for k,v in corona.items():
+    corona_data_pre[k] = str_to_flt(v.strip())
