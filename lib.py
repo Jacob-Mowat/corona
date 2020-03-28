@@ -69,4 +69,3 @@ import json
 with open(os.path.join(pathlib.Path(__file__).parent.absolute(), "data", "allseq.json")) as f:
   allseq = json.load(f)
 cc = allseq['MN908947']
-
